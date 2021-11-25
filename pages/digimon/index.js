@@ -7,6 +7,12 @@ export default function useEffectPage() {
     const [resourceType, setResourceType] = useState('agumon');
     const [items, setItems] = useState([]);
     const [todo, setTodo] = useState([]);
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 100,
+          behavior: 'smooth'
+        });
+      };
 
     // UseEffect executes function every change of array arguments:
     // useEffect(function, array_arguments (optional, can be empty array))
@@ -17,6 +23,7 @@ export default function useEffectPage() {
         fetch(`https://digimon-api.herokuapp.com/api/digimon/name/${resourceType}`)
             .then(response => response.json())
             .then(json => setItems(json))
+            scrollToTop();
             
     }, [resourceType]);
     useEffect(() => {

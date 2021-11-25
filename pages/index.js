@@ -19,7 +19,7 @@ export default function Home() {
       </div>
     
         <div className="botones">
-          
+
           <button className="boton">
             <Link href="/universidad"><a className="botonPrincipal">Universidad!</a></Link>
           </button>

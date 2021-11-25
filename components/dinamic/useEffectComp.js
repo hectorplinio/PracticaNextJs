@@ -6,10 +6,13 @@ import Head from 'next/head'
 
 export default function useEffectAdvancedPage() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [title, setTitle] = useState("Inicio");
+
 
     const handleResize = () => {
         console.log("aaa");
         setWindowWidth(window.innerWidth);
+        setTitle(document.title="Cambio");
     }
 
     

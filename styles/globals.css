@@ -31,7 +31,7 @@
     @apply w-3/5 m-auto mt-16;
   }
   .botonPrincipal{
-    @apply m-2 text-5xl w-44 mt-16 bg-green-500 rounded-xl;
+    @apply m-2 text-5xl w-44 mt-16 bg-green-300 rounded-xl;
   }
   .bandera{
     @apply w-1/3 text-2xl p-px pt-8 m-auto;

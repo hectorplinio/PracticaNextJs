@@ -4,13 +4,13 @@ import Link from "next/link"
 import Head from 'next/head'
 function form() {
 
-    const [lista, setLista] = useState([]);
-    const [palabra, setPalabra] = useState('');
+    const [list, setList] = useState([]);
+    const [word, setWord] = useState('');
 
-    const sumar_palabra = (e) =>{
+    const addWord = (e) =>{
         e.preventDefault();
-        setLista(ol => [...ol ,' '+ palabra]);
-        document.getElementById("palabra").value = "";
+        setList(ol => [...ol ,' '+ word]);
+        document.getElementById("word").value = "";
     }
 
     return (
@@ -33,14 +33,14 @@ function form() {
     
            <div className="caja">
                <div className="formulario">
-               <form className="form" onSubmit={sumar_palabra} >
-                   <label>Escribe una palabra</label>
-                    <input onChange={(e)=>setPalabra(e.target.value)} type="text" id="palabra"></input>
+               <form className="form" onSubmit={addWord} >
+                   <label>Write a word</label>
+                    <input onChange={(e)=>setWord(e.target.value)} type="text" id="word"></input>
                     <button className="botonForm">Enviar</button>
                 </form>
                 
                 </div>
-                <p className="lista">Lista:<br></br> {lista}</p>
+                <p className="lista">Lista:<br></br> {list}</p>
                
             </div>
         </>
